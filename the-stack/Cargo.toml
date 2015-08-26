@@ -1,0 +1,4 @@
+[package]
+name = "the-stack"
+version = "0.1.0"
+authors = ["Galen Palmer <palmergs@gmail.com>"]
