@@ -19,13 +19,13 @@ extern {
             compressed_length: size_t) -> c_int;
 }
 
-// pub fn validate(src: &[u8]) -> c_int {
-//     unsafe {
-//         let srclen = src.len() as size_t;
-//         let psrc = src.as_ptr();
-//         snappy_validate_compressed_buffer(psrc, srclen);
-//     }
-// }
+pub fn validate(src: &[u8]) -> c_int {
+    unsafe {
+        let srclen = src.len() as size_t;
+        let psrc = src.as_ptr();
+        snappy_validate_compressed_buffer(psrc, srclen)
+    }
+}
 
 pub fn compress(src: &[u8]) -> Vec<u8> {
     unsafe {
