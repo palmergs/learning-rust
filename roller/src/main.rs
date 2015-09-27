@@ -1,6 +1,7 @@
 extern crate rand;
 
 use std::env;
+// use std::process;
 use rand::{thread_rng, Rng};
 
 fn main() {
@@ -13,13 +14,15 @@ fn main() {
         println!("{}", x);
     }
 
-    let range = match args[1].parse::<u32>() {
+    let range = match args[1].parse::<i32>() {
         Ok(x) => { x }
         Err(f) => { panic!(f.to_string()) }
     };
     println!("Range = {}", range);
 
     let mut generator = rand::thread_rng();
-    let val : u32 = generator.gen_range(0, range);
+    let val : i32 = generator.gen_range(0, range);
     println!("Random number = {}", val);
+
+    // std::process::exit(val);
 }
