@@ -11,6 +11,7 @@ struct SimulationResult {
 // Run a single simulation of the Monty Hall problem.
 fn simulate<R: Rng>(random_door: &Range<u32>, rng: &mut R) -> SimulationResult {
 
+    // This is the location of the car
     let car = random_door.ind_sample(rng);
 
     // This is our initial choice
