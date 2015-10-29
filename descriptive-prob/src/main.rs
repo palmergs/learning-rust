@@ -1,21 +1,26 @@
+//extern crate rand;
+
 use Event::NewRelease;
+//use rand::{thread_rng, Rng};
 
 enum Event {
     NewRelease,
 }
 
-fn probability(_: &Event) -> f64 {
-    0.95
+fn probability(_: &Event) -> i32 {
+//    let mut random = rand::thread_rng();
+//    random.gen_range(0, 101)
+    80
 }
 
 fn descriptive_probability(event: Event) -> &'static str {
     match probability(&event) {
-        1.00 => "certain",
-        0.00 => "impossible",
-        0.00 ... 0.25 => "very unlikely",
-        0.25 ... 0.50 => "unlikely",
-        0.50 ... 0.75 => "likely",
-        0.75 ... 1.00 => "very likely",
+        100 => "certain",
+        0 => "impossible",
+        0 ... 25 => "very unlikely",
+        25 ... 50 => "unlikely",
+        50 ... 75 => "likely",
+        75 ... 100 => "very likely",
         _ => unreachable!()
     }
 }

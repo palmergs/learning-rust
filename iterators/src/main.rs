@@ -3,7 +3,7 @@ fn finder() {
     println!("Check for existing value");
     let greater_than_eight = (1..10).find(|x| *x > 8);
     match greater_than_eight {
-        Some(_) => println!("Found some"),
+        Some(r) => println!("Found some {}", r),
         None => println!("None found."),
     }
 }
