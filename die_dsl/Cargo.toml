@@ -1,0 +1,4 @@
+[package]
+name = "die_dsl"
+version = "0.1.0"
+authors = ["galenpalmer"]
