@@ -21,7 +21,7 @@ fn main() {
     let mut buffer = String::new();
     let count = match reader.read_to_string(&mut buffer) {
         Ok(n) => n,
-        Err(_) => 0
+        _ => 0
     };
 
     println!("({}) {}", count, buffer); 
